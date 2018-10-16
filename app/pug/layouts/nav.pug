@@ -1,0 +1,55 @@
+include ../bem/index
+include ../helpers/config
+include ../helpers/data
+include ../helpers/mixins
+
++b.fixed._md-top
+	+b.top-info
+		+e.container.container
+			+e.row.row
+				+e.column._info.col-6
+					+e.translate
+					+e.course
+						+e.SPAN.course-title Курс Bitcoin: 
+						+e.SPAN.course-number 11782.1
+						+e.SPAN.course-currency $ 
+						+e.SPAN.course-data (30.11.2017, 17:31)
+				+e.column._contact.col-6
+					+b.UL.social
+						+e.LI.item
+							+e.A.item-link._facebook(href="#")
+								+e.I.item-icon.fa.fa-envelope
+								+e.SPAN.item-text info@cryptonet.biz
+						+e.LI.item
+							+e.A.item-link._facebook(href="#")
+								+e.I.item-link-icon.fa.fa-facebook
+						+e.LI.item
+							+e.A.item-link._vk(href="#")
+								+e.I.item-link-icon.fa.fa-vk
+						+e.LI.item
+							+e.A.item-link._youtube(href="#")
+								+e.I.item-link-icon.fa.fa-youtube
+						+e.LI.item
+							+e.A.item-link._telegram(href="#")
+								+e.I.item-link-icon.fa.fa-telegram
+	+b.nav._style
+		+e.container.container
+			+e.row.row.flex-y-center
+				+e.logo.col-12.col-md-4
+					+b.vhamburger(type="button" id="js-vnav__btn")
+						+e.SPAN.lines
+							span Line1
+							span Line2
+							span Line3
+						//+e.SPAN.text Menu
+					+e.logo-content
+						+e.logo-content-img(src="img/logo.png" alt="")
+				+e.NAV.menu.col-12.col-md-8#navigation
+					+e.menu-inner
+						ul
+							for item in navigation
+								+menu-item('true', item.link, item.name)
+					+e.menu-inner
+						ul
+							+menu-item
+								+b.A.btn._brand-1._navigation(href="#") Бесплатная консультация

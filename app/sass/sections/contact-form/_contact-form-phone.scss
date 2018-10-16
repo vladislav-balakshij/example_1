@@ -1,0 +1,21 @@
+@include b('contact-form'){
+	@include e('phone'){
+		position: relative;
+		@include ee('body'){
+			position: absolute;
+			top: 0;
+			left: 0;
+			input:not([type="submit"]){
+				border: 2px solid #ddd;
+			}
+			[type="submit"]{
+				width: 100%;
+				text-align: center;
+			}
+			@include resp-min(lg){
+				left: 95px;
+				top: 80px;
+			}
+		}
+	}
+}

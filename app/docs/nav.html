@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="MobileOptimized" content="width">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
+    <meta name="theme-color" content="#000000">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#000000">
+    <meta name="apple-mobile-web-app-title" content="Application Name">
+    <meta name="msapplication-TileImage" content="img/favicons/144x144.png">
+    <meta name="msapplication-TileColor" content="#000000">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="address=no">
+        <link href="//fonts.googleapis.com/css?family=Roboto:300,400,700,900&amp;amp;subset=cyrillic" rel="stylesheet">
+        <link href="../css/style.css" rel="stylesheet">
+        <link href="../css/docs/docs.css" rel="stylesheet">
+        <link href="../css/docs/prism.css" rel="stylesheet">
+        <script src="../js/vanilla.main.js"></script>
+        <script src="../js/docs/prism.min.js"></script>
+        <title>Unit Test - Navigation</title>
+        <meta name="application-name" content="Unit Test - Navigation">
+        <meta property="og:title" content="Unit Test - Navigation">
+        <meta itemprop="headline" content="Unit Test - Navigation">
+        <meta property="og:site_name" content="Unit Test - Navigation">
+  </head>
+  <body>
+    <div class="site" id="page">
+      <div class="site-content" id="content">
+                    <section class="vdocs">
+                                      <div class="vdocs__intro">
+                                        <div class="vcontainer">
+                                                              <div class="vdocs__intro-title">Navigation
+                                                              </div>
+                                                              <div class="vdocs__intro-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos ipsa repellat quia totam ab doloribus!
+                                                              </div>
+                                        </div>
+                                      </div>
+                                      <div class="vdocs__group">
+                                                            <div class="vdocs__group-title">Default navigation
+                                                            </div>
+                                                    <div class="vnav vnav_style">
+                                                                      <div class="vnav__container vcontainer">
+                                                                                        <div class="vnav__row vrow vflex-y-center">
+                                                                                                          <div class="vnav__logo vcol-8 vcol-md-3">
+                                                                                                                        <button class="vhamburger" type="button" id="js-vnav__btn"><span class="vhamburger__lines"><span>Line1</span><span>Line2</span><span>Line3</span></span>
+                                                                                                                          <!--+e.SPAN.text Menu-->
+                                                                                                                        </button>
+                                                                                                                            <div class="vnav__logo-content"><img class="vnav__logo-content-img" src="../img/logo.png" alt="" role="presentation"/>
+                                                                                                                            </div>
+                                                                                                          </div>
+                                                                                                          <nav class="vnav__menu vcol-12 vcol-md-6" id="navigation">
+                                                                                                            <ul>
+                                                                                                                  <li class="menu-item"><a href="index.html">Link_1</a>
+                                                                                                                  </li>
+                                                                                                                  <li class="menu-item"><a href="index2.html">Link 2</a>
+                                                                                                                  </li>
+                                                                                                                  <li class="menu-item"><a href="index3.html">Link 3</a>
+                                                                                                                  </li>
+                                                                                                                  <li class="menu-item">
+                                                                                                                                <button class="vbtn vbtn_navigation" data-action="v-modal" data-open="#form">Button
+                                                                                                                                </button>
+                                                                                                                  </li>
+                                                                                                            </ul>
+                                                                                                          </nav>
+                                                                                                          <div class="vnav__addition vcol-4 vcol-md-3" id="js-vnav-addition">
+                                                                                                                            <div class="vnav__addition-toggle" id="js-vnav-toggle"><span></span><span></span><span></span>
+                                                                                                                            </div>
+                                                                                                                            <div class="vnav__addition-links js-vnav-links"><a class="vnav__addition-link">+99 999 999 99</a><a class="vnav__addition-link vnav__addition-link_hidden">+99 999 999 99</a>
+                                                                                                                            </div>
+                                                                                                          </div>
+                                                                                        </div>
+                                                                      </div>
+                                                    </div>
+                                      </div>
+                                      <div class="vdocs__group">
+                                                            <div class="vdocs__group-title">Navigation without right elements
+                                                            </div>
+                                                    <div class="vnav vnav_style">
+                                                                      <div class="vnav__container vcontainer">
+                                                                                        <div class="vnav__row vrow vflex-y-center">
+                                                                                                          <div class="vnav__logo vcol-8 vcol-md-3">
+                                                                                                                        <button class="vhamburger" type="button" id="js-vnav__btn"><span class="vhamburger__lines"><span>Line1</span><span>Line2</span><span>Line3</span></span>
+                                                                                                                          <!--+e.SPAN.text Menu-->
+                                                                                                                        </button>
+                                                                                                                            <div class="vnav__logo-content"><img class="vnav__logo-content-img" src="../img/logo.png" alt="" role="presentation"/>
+                                                                                                                            </div>
+                                                                                                          </div>
+                                                                                                          <nav class="vnav__menu text-right vcol-12 vcol-md-6" id="navigation">
+                                                                                                            <ul>
+                                                                                                                  <li class="menu-item"><a href="index.html">Link_1</a>
+                                                                                                                  </li>
+                                                                                                                  <li class="menu-item"><a href="index2.html">Link 2</a>
+                                                                                                                  </li>
+                                                                                                                  <li class="menu-item"><a href="index3.html">Link 3</a>
+                                                                                                                  </li>
+                                                                                                                  <li class="menu-item">
+                                                                                                                                <button class="vbtn vbtn_navigation" data-action="v-modal" data-open="#form">Button
+                                                                                                                                </button>
+                                                                                                                  </li>
+                                                                                                            </ul>
+                                                                                                          </nav>
+                                                                                        </div>
+                                                                      </div>
+                                                    </div>
+                                      </div>
+                      <div class="vcontainer">
+                        <div class="vrow">
+                                          <div class="vdocs__content vcol-12 vcol-sm-8">
+                                          </div>
+                                          <div class="vdocs__sidebar vcol-12 vcol-sm-4">
+                                                            <p class="vdocs__sidebar-title">Available elements
+                                                            </p>
+                                                            <ul class="vdocs__sidebar-list">
+                                                                              <li class="vdocs__sidebar-list-item"><a class="vdocs__sidebar-list-item-link" href="button.html">Buttons</a>
+                                                                              </li>
+                                                                              <li class="vdocs__sidebar-list-item"><a class="vdocs__sidebar-list-item-link" href="modal.html">Modal</a>
+                                                                              </li>
+                                                                              <li class="vdocs__sidebar-list-item"><a class="vdocs__sidebar-list-item-link" href="title.html">Title</a>
+                                                                              </li>
+                                                                              <li class="vdocs__sidebar-list-item"><a class="vdocs__sidebar-list-item-link" href="form.html">Form</a>
+                                                                              </li>
+                                                                              <li class="vdocs__sidebar-list-item"><a class="vdocs__sidebar-list-item-link" href="collapse.html">Collapse</a>
+                                                                              </li>
+                                                            </ul>
+                                          </div>
+                        </div>
+                      </div>
+                    </section>
+      </div>
+    </div>
+  </body>
+</html>

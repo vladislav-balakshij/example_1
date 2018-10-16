@@ -1,0 +1,37 @@
+@include b('site-footer'){
+	@include e('menu'){
+		list-style: none;
+		padding-bottom: 35px;
+		margin-bottom: 35px;
+		border-bottom: 1px solid #424d61;
+
+		a{
+			display: block;
+			padding-top: 5px;
+			padding-bottom: 5px;
+			text-decoration: none;
+			color: inherit;
+			transition: all ease 0.5s;
+			@include resp-min(sm){
+				@include resp-max(md){
+					font-size: 14px;
+				}
+			}
+			&:hover{
+				color: $color-brand-1;
+			}
+		}
+		li{
+			&.current_page_item a{
+				color: $color-brand-1;
+			}
+		}
+		@include resp-min(sm){
+			display: flex;
+			flex-flow: row wrap;
+			li{
+				flex-basis: 50%;
+			}
+		}
+	}
+}

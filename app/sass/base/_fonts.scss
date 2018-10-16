@@ -1,0 +1,37 @@
+// Connect fonts
+@mixin connect-font($font,$class_name: $font, $fileType: otf){
+	@font-face{
+		font-family: $font;
+		src: local("#{$font}"), 
+		url(../fonts/#{$font}.#{$fileType});
+	}
+	@if $class_name != null{
+		.#{$class_name}{
+			font-family: $font;
+		}
+	}@else{
+		.#{$font}{
+			font-family: $font;
+		}
+	}
+}
+
+//@include connect-font(ProximaRegular,regular);
+//@include connect-font(ProximaLight,light);
+//@include connect-font(ProximaBold,bold);
+//@include connect-font(ProximaBlack,black);
+
+
+.font-general{
+	font-family: 'Open Sans', sans-serif;
+}
+$font-weights: (
+	'font-weight-light'   : 300,
+	'font-weight-semi'    : 600
+);
+
+@each $name, $weight in $font-weights{
+	.#{$name}{
+		font-weight: $weight;
+	}
+}

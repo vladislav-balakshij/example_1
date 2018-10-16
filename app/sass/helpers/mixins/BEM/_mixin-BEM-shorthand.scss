@@ -1,0 +1,30 @@
+////
+/// This is a poster comment.
+/// It will apply annotations to all items from file.
+/// @group bem
+/// @author Vsevolod Kurochka
+////
+
+/// Shorthand mixin for mixin `block`	
+/// @param {Length} $name - Block class
+@mixin b($name){
+	@include block($name){
+		@content;
+	}
+}
+
+/// Shorthand mixin for mixin `element`
+/// @param {Length} $name - Element class
+@mixin e($name){
+	@include element($name){
+		@content;
+	}
+}
+
+/// Shorthand mixin for mixin `el-of-el`
+/// @param {Length} $name - Element of element classname
+@mixin ee($name){
+	@include el-of-el($name){
+		@content;
+	}
+}

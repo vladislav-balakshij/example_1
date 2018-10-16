@@ -1,0 +1,5 @@
+// Create pseudo element
+@mixin pseudo($contentText: ""){
+	content: $contentText;
+	position: absolute;
+}

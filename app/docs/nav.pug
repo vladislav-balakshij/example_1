@@ -1,0 +1,54 @@
+extends layout
+block head
+	+add-meta('Unit Test - Navigation')
+block intro
+	+docs-intro('Navigation', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos ipsa repellat quia totam ab doloribus!')
+block special
+	+e.group
+		+docs-group-title('Default navigation')
+		+b.vnav._style
+			+e.container.vcontainer
+				+e.row.vrow.vflex-y-center
+					+e.logo.vcol-8.vcol-md-3
+						+b.vhamburger(type="button" id="js-vnav__btn")
+							+e.SPAN.lines
+								span Line1
+								span Line2
+								span Line3
+							//+e.SPAN.text Menu
+						+e.logo-content
+							+e.logo-content-img(src="../img/logo.png" alt="")
+					+e.NAV.menu.vcol-12.vcol-md-6#navigation
+						ul
+							for item in navigation
+								+menu-item('true', item.link, item.name)
+							+menu-item
+								+b.BUTTON.vbtn._navigation(data-action="v-modal" data-open="#form") Button
+					+e.addition.vcol-4.vcol-md-3#js-vnav-addition
+						+e.addition-toggle#js-vnav-toggle
+							span
+							span
+							span
+						+e.addition-links.js-vnav-links
+							+e.A.addition-link +99 999 999 99
+							+e.A.addition-link._hidden +99 999 999 99
+	+e.group
+		+docs-group-title('Navigation without right elements')
+		+b.vnav._style
+			+e.container.vcontainer
+				+e.row.vrow.vflex-y-center
+					+e.logo.vcol-8.vcol-md-3
+						+b.vhamburger(type="button" id="js-vnav__btn")
+							+e.SPAN.lines
+								span Line1
+								span Line2
+								span Line3
+							//+e.SPAN.text Menu
+						+e.logo-content
+							+e.logo-content-img(src="../img/logo.png" alt="")
+					+e.NAV.menu.text-right.vcol-12.vcol-md-6#navigation
+						ul
+							for item in navigation
+								+menu-item('true', item.link, item.name)
+							+menu-item
+								+b.BUTTON.vbtn._navigation(data-action="v-modal" data-open="#form") Button

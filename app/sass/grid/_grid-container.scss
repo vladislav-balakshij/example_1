@@ -1,0 +1,28 @@
+/* -----------------------------------------------------------------------------
+  CONTAINER
+----------------------------------------------------------------------------- */
+/// Container width.
+$themeContainer: 'container';
+
+/// Container width.
+$container-width: (
+  sm          : 750px,
+  md          : 970px,
+  lg          : 1170px
+);
+
+@include b($themeContainer){
+	position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  min-height: 1px;
+	@include xOffset('padding', getComp(gutter));
+  @each $c-resp, $container_value in $container-width{
+    @include resp-min($c-resp){
+      width: $container_value;
+    }
+  }  
+}
+/* -----------------------------------------------------------------------------
+  CONTAINER
+----------------------------------------------------------------------------- */

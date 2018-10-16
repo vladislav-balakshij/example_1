@@ -1,0 +1,21 @@
+/// Media Queries
+@mixin resp-min($breakpoint, $breakpoints: $breakpoints){
+	$value: map-get($breakpoints,$breakpoint);
+	@if $value != null  {
+		@media (min-width: $value ) {
+			@content;
+		}
+	}@else{
+		 @error $error-variable + " #{$breakpoint}";
+	}
+}
+@mixin resp-max($breakpoint, $breakpoints: $breakpoints){
+	$value: map-get($breakpoints,$breakpoint);
+	@if $value != null { 
+		@media (max-width: $value - 1px) {
+			@content;
+		} 
+	}@else{
+		 @error $error-variable + " #{$breakpoint}";
+	}
+}

@@ -1,0 +1,44 @@
+@include b('contact-form'){
+	@include e('info'){
+		@include ee('item'){
+			position: relative;
+			padding-left: 30px;
+			font-size: 18px;
+			font-weight: 600;
+			&:not(:last-child){
+				margin-bottom: 45px;
+			}
+			&:before{
+				@include pseudo();
+				left: 0;
+				top: 50%;
+				transform: translateY(-50%);
+				@include size(20px, 30px);
+			}
+			@include resp-min(sm){
+				font-size: 21px;
+				padding-left: 60px;
+				a{
+					color: inherit;
+					text-decoration: none;
+					transition: all ease 0.5s;
+					&:hover{
+						color: $color-brand-1;
+					}
+				}
+				@include mod('phone'){
+					&:before{
+						@include size(39px, 68px);
+						@include bg('../img/icon-smartphone.png');
+					}
+				}
+				@include mod('map'){
+					&:before{
+						@include size(39px, 55px);
+						@include bg('../img/icon-map-marker.png');
+					}
+				}
+			}
+		}
+	}
+}

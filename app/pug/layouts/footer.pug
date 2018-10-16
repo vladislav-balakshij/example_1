@@ -1,0 +1,80 @@
+include ../bem/index
+include ../helpers/config
++b.SECTION.contact-form
+	+e.container.container
+		+e.row.row
+			+e.column._text.col-12.col-sm-6
+				+e.content
+					+e.P.content-title Получите консультацию о проектах сообщества, заполнив форму справа
+					+e.info
+						+e.info-item._phone
+							a(href="#") +38 (068) 936-55-65
+						+e.info-item._map
+							p Киев, ул. Евгения Коновальца (Щорса), 44а, офис №12
+			+e.column._phone.col-12.col-sm-6
+				+e.phone
+					+e.IMG.phone-img(src="img/iphone.png")
+					+e.phone-body
+						+b.FORM.vform._block
+							+e.content
+								+e.row
+									+e.INPUT.control(name="vname" type="text" placeholder="Name")
+								+e.row
+									+e.INPUT.control(name="vemail" type="email" placeholder="E-mail")
+								+e.row
+									+e.INPUT.control(name="vphone" type="phone" placeholder="Phone")
+								+e.row
+									+e.BUTTON.submit.vbtn._color-brand-1(type="submit") Submit
++b.FOOTER.site-footer#colophon
+	+e.container.container
+		+e.row.row
+			+e.column._menu.col-12.col-sm-6
+				+e.UL.menu
+					li
+						a(href="#") Блог
+					li
+						a(href="#") Политика конфиденциальности
+					li
+						a(href="#") О компании
+					li
+						a(href="#") Отказ от ответственности
+					li
+						a(href="#") Наши продукты
+					li
+						a(href="#") Отзывы
+				+e.detail
+					+e.detail-row.row
+						.vcol-12.vcol-md-6
+							p Cryptonet 2018
+							a(href="#") +38 (068) 936-55-65
+						.vcol-12.vcol-md-6
+							p Киев, ул. Евгения Коновальца (Щорса), 44а, офис №12
+				+e.logo
+					img(src="img/logo.png")
+			+e.column._info.col-12.col-sm-6
+				+e.info
+					+e.P.info-title Следите за нами, чтобы получать последние новости из криптовселенной
+					+e.info-body
+						+b.tabs
+							+e.UL.list
+								+e.LI.list-item.active
+									+e.A.list-item-link(data-action="tab" data-target="#footer-info-tab-1")
+										+e.I.item-link-icon.fa.fa-facebook
+								+e.LI.list-item
+									+e.A.list-item-link(data-action="tab" data-target="#footer-info-tab-2")
+										+e.I.item-link-icon.fa.fa-vk
+								+e.LI.list-item
+									+e.A.list-item-link(data-action="tab" data-target="#footer-info-tab-3")
+										+e.I.item-link-icon.fa.fa-youtube
+								+e.LI.list-item
+									+e.A.list-item-link(data-action="tab" data-target="#footer-info-tab-4")
+										+e.I.item-link-icon.fa.fa-telegram
+							+e.content
+								+e.content-inner.active(id="footer-info-tab-1")
+									p 1
+								+e.content-inner(id="footer-info-tab-2")
+									p 2
+								+e.content-inner(id="footer-info-tab-3")
+									p 3
+								+e.content-inner(id="footer-info-tab-4")
+									p 4

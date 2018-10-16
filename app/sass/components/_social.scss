@@ -1,0 +1,36 @@
+@include b('social'){
+	list-style: none;
+	@extend %contact-social;
+	@include e('item'){
+		display: inline-block;
+		vertical-align: middle;
+		&:not(:last-child){
+			margin-right: 15px;
+		}
+		@include ee('text'){
+			margin-left: 10px;
+			display: none;
+			@include resp-min(md){
+				display: inline-block;
+			}
+		}
+		@include ee('link'){
+			position: relative;
+			display: inline-block;
+			vertical-align: middle;
+			text-decoration: none;
+			color: inherit;
+			font-size: 11px;
+			transition: all ease 0.5s;
+			&:hover{
+				color: $color-brand-1;
+			}
+			@include resp-min(xs){
+				font-size: 13px;
+			}
+			@include resp-min(sm){
+				font-size: 18px;
+			}
+		}
+	}
+}

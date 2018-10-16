@@ -1,0 +1,17 @@
+/// Helper mixin to size elements in a single line.
+/// This mixin is essentially a short hand to define
+/// both `width` and `height` simultaneously.
+///
+/// @author Vsevolod Kurochka
+///
+/// @param {Length} $width - Element's width
+/// @param {Length} $height [$width] - Element's height
+/// @output `width` and `height`
+///
+/// @example scss - Sizing `.foo`
+///   .foo {
+///     @include size(100%, 3em);
+@mixin size($width, $height: $width){
+	width: $width;
+	height: $height;
+}

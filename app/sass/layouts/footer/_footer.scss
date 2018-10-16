@@ -1,0 +1,36 @@
+$footer-map: (
+	'background'	: #101622,
+	'color'				: #fff
+);
+@include b('site-footer'){
+	position: relative;
+	font-size: 15px;
+	padding-top: 75px;
+	padding-bottom: 45px;
+	background-color: getComp('background', $footer-map);
+	color: getComp('color', $footer-map);
+	overflow: hidden;
+	z-index: z-index('default') + 1;
+	
+	&:after{
+		@include pseudo();
+		left: 0;
+		bottom: 0;
+		@include bg('../img/wave-footer-transparent.png');
+		@include size(250px, 150px);
+		z-index: -1;
+		@include resp-min(sm){
+			@include size(600px, 300px);
+		}
+		@include resp-min(md){
+			@include size(800px, 350px);
+		}
+	}
+	@include resp-min(sm){
+		font-size: 18px;
+	}
+	@include resp-min(md){
+		padding-top: 75px;
+		padding-bottom: 70px;
+	}
+}

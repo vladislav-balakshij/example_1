@@ -1,0 +1,77 @@
+/* -----------------------------------------------------------------------------
+	COLUMNS
+----------------------------------------------------------------------------- */
+$themeColumn: 'col';
+
+@mixin flexColumnWidth($value){
+	flex-basis: $value;
+	max-width: $value;
+}
+@mixin make-column($class: null, $push: "push", $pull: "pull", $offset: "offset"){
+	@for $i from 1 through getComp(columns){
+		$defaultValue: ( getComp(width)/getComp(columns) ) * $i;
+		@if getComp(flex) == true{     
+			@if $class != null {
+				@include b( unquote($themeColumn) - $class - $i ) {
+					@include flexColumnWidth($defaultValue);
+				}
+			}@else{
+				@include b( unquote($themeColumn) - $i ) {
+					@include flexColumnWidth($defaultValue);
+				}
+			}
+		}@else{
+			@if $class != null {
+				.#{$class}-#{$i}{
+					width: $defaultValue;
+				}      
+			}
+			@if $push == "push" {
+				.#{$class}-push-#{$i}{
+					left: $defaultValue;
+				}      
+			}
+			@if $pull == "pull" {
+				.#{$class}-pull-#{$i}{
+					right: $defaultValue;
+				}
+			}
+			@if $offset == "offset" {
+				.#{$class}-offset-#{$i}{
+					margin-left: $defaultValue;
+				}
+			}
+		}
+	}
+}
+
+@include make-column();
+@include resp-min(xs){
+	@include make-column(xs);
+}
+@include resp-min(sm){
+	@include make-column(sm);
+}
+@include resp-min(md){
+	@include make-column(md);
+}
+@include resp-min(lg){
+	@include make-column(lg);
+}
+@if getComp(flex) == true{
+	[class*=#{$themePrefix}#{$themeColumn}-]{
+		flex-grow: 0;
+		flex-shrink: 0;
+		@include xOffset('padding', getComp(gutter));
+	}
+}@else{
+	[class*=#{$themePrefix}#{$themeColumn}-]{
+		position: relative;
+		min-height: 1px;
+		@include xOffset('padding', getComp(gutter));
+		float: left;
+	}
+}
+/* -----------------------------------------------------------------------------
+	COLUMNS
+----------------------------------------------------------------------------- */

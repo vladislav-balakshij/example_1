@@ -1,0 +1,17 @@
+@include b('site-footer'){
+	@include e('info'){
+		@include ee('title'){
+			font-size: 20px;
+			margin-bottom: 30px;
+			@include resp-min(sm){
+				text-align: center;
+			}
+			@include resp-min(md){
+				font-size: 25px;
+			}
+			@include resp-min(lg){
+				font-size: 30px;
+			}
+		}
+	}
+}

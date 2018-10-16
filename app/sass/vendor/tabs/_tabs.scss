@@ -1,0 +1,14 @@
+%vtabs-transition{
+	@include transition();
+}
+
+.vtabs{
+	&__content{
+		&-inner{
+			display: none;
+			&.vactive{
+				display: block;
+			}
+		}
+	}
+}

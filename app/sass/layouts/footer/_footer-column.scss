@@ -1,0 +1,9 @@
+@include b('site-footer'){
+	@include e('column'){
+		@include resp-max(sm){
+			&:not(:last-child){
+				margin-bottom: 45px;
+			}
+		}
+	}
+}

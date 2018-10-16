@@ -1,0 +1,34 @@
+@include b($themeNav){
+	@include e('menu'){
+		-webkit-overflow-scrolling:touch;
+		@include resp-max(md){
+			.v#{$themeNav}_style &{
+				transform: translateZ(0) translateX(-120%);
+				position: fixed;
+				left: 0;
+				width: 270px;
+				height: 100%;
+				padding: 0 0 100px 0;
+				top: 84px;
+				z-index: z('default');
+				overflow-y: auto;
+				@include transition($tr-dur: 0.3s);
+				background-color: $color-responsive-menu;
+				&_active{
+					transform: none;
+				}
+			}
+		}
+		@include resp-min(md){
+			text-align: right;
+			color: #fff;
+			@include ee('inner'){
+				display: inline-block;
+				vertical-align: middle;
+				&:not(:last-child){
+					margin-right: 15px;
+				}
+			}
+		}
+	}
+}

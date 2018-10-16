@@ -1,0 +1,14 @@
+// Mixin, who will take the font sizes from the map($sizes)
+@mixin fs($fs-map, $fs-breakpoints: $breakpoints){
+	$fs-map: map-get($sizes, $fs-map);
+	@each $fs-breakpoint, $fs-font-size in $fs-map{
+		$fs-breakpoint: map-get($fs-breakpoints, $fs-breakpoint);
+		@if $fs-breakpoint != null{
+			@media (min-width: $fs-breakpoint){
+				font-size: $fs-font-size;
+			}
+		}@else{
+			@error 'No size';
+		} 
+	}
+}

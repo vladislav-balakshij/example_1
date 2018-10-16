@@ -1,0 +1,18 @@
+$themeFixed: 'fixed';
+@include b($themeFixed){
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: z-index('fixed');
+	@include resp-max(md){
+		& + .site{
+			margin-top: 56px;
+		}
+	}
+	@include resp-min(md){
+		padding-top: 15px;
+		padding-bottom: 15px;
+		background-color: #000;
+	}
+}

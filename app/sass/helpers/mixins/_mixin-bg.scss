@@ -1,0 +1,5 @@
+// Load background
+@mixin bg($url, $pos: 0 0, $repeat: no-repeat, $size: cover){
+	background: url('#{$url}') $pos $repeat;
+	background-size: $size;
+}

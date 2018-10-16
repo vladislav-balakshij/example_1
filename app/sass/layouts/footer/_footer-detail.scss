@@ -1,0 +1,16 @@
+@include b('site-footer'){
+	@include e('detail'){
+		margin-bottom: 35px;
+		a{
+			display: block;
+			text-decoration: none;
+			padding-top: 5px;
+			padding-bottom: 5px;
+			color: inherit;
+			transition: all ease 0.5s;
+			&:hover{
+				color: $color-brand-1;
+			}
+		}
+	}
+}

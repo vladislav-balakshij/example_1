@@ -1,0 +1,51 @@
+@include b('top-info'){
+	color: #5b5f67;
+	font-size: 10px;
+	@include resp-max(md){
+		padding-top: 5px;
+		padding-bottom: 5px;
+		background-color: #000;
+	}
+	@include resp-min(sm){
+		font-size: 16px;
+	}
+	@include e('row'){
+		align-items: center;
+	}
+	@include e('column'){
+		@include mod('contact'){
+			text-align: right;
+		}
+	}
+	@include e('course'){
+		@at-root{
+			%title-number{
+				color: #fff;
+			}
+		}
+		@include ee('title'){
+			@extend %title-number;
+		}
+		@include ee('currency'){
+			font-weight: 600;
+			@extend %title-number;
+		}
+		@include ee('number'){
+			@extend %title-number;
+			font-weight: 600;
+		}
+		@include ee('data'){
+			display: none;
+			@include resp-min(xs){
+				display: inline-block;
+			}
+		}
+	}
+	@at-root{
+		%contact-social{
+			display: inline-block;
+			vertical-align: middle;
+		}
+	}
+	
+}

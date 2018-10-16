@@ -1,0 +1,25 @@
+extends layout
+block head
+	+add-meta('Unit Test - Index')
+block intro
+	+docs-intro('Modal', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos ipsa repellat quia totam ab doloribus!')
+block content
+	+e.group
+		+docs-group-title('Modal example')
+		+b.BUTTON.vbtn(data-action="vmodal" data-open="#example-id") Open Modal
+		+b.vmodal#example-id
+			+e.box._default
+				+e.header
+					+e.P.title Modal title
+					+e.BUTTON.close(data-close="vmodal") &times;
+				+e.body
+					p Lorem....
+		+docs-code('pug')
+			|+b.BUTTON.vbtn(data-action="vmodal" data-open="#example-id") Open Modal
+			|+b.vmodal#example-id
+			|	+e.box._default
+			|		+e.header
+			|			+e.P.title Modal title
+			|			+e.BUTTON.close(data-close="vmodal") &times;
+			|		+e.body
+			|			p Lorem...

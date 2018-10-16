@@ -1,0 +1,4 @@
+// Transition
+@mixin transition($tr-prop: all, $tr-time: ease, $tr-dur: .5s){
+	transition: $tr-prop $tr-time $tr-dur;
+}

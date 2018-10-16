@@ -1,0 +1,43 @@
+.menu-item{
+	display: block;
+	@include transition();
+	a{
+		display: block;
+		position: relative;
+		
+		text-decoration: none;
+		&:not(.vbtn){
+			color: inherit;
+		}
+	}
+	&.current-menu-item{
+		a{
+			&:not(.#{$themePrefix}btn){
+				font-weight: 600;
+			}
+		}
+	}
+	@include resp-max(md){
+		margin-bottom: 10px;
+		a{
+			&:not(.#{$themePrefix}btn){
+				padding: 10px 15px;
+				color: $color-white;
+			}
+		}
+	}
+	@include resp-min(md){
+		display: inline-block;
+		vertical-align: middle;
+		&:not(:last-child){
+			margin-right: 15px;
+		}
+		a{
+			&:not(.#{$themePrefix}btn){
+				padding-top: 7.5px;
+				padding-bottom: 7.5px;
+				@include linkEffect3();
+			}	
+		}
+	}
+}

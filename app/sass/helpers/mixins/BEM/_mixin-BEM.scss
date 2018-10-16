@@ -1,0 +1,59 @@
+
+////
+/// @author Vsevolod Kurochka
+/// @param {Name} $name - Element's classname
+/// @group BEM
+////
+
+/// Helper mixin that helps to create a `BLOCK` of BEM structure.
+/// @example scss - Create `BLOCK` with className `.foo`
+	/// @include block('foo'){
+	///		font-size: 12px;
+	/// }
+@mixin block($name){
+	.#{$themePrefix}#{$name}{
+		@content;
+	}
+}
+
+/// Helper mixin that helps to create a `ELEMENT` of BEM structure.
+/// @example scss - Create `BLOCK` with className `.foo`
+	/// @include block('foo'){
+	/// 	@include element('bar'){
+	/// 		font-size: 12px;
+	/// 	}
+	/// }
+@mixin element($name){
+	&__#{$name}{
+		@content;
+	}
+}
+
+/// Helper mixin that helps to create a `Modifier` of BEM structure.
+/// @example scss - Create `Modifier` for `BLOCK` with className `.foo`
+	/// @include b('foo'){
+	/// 	color: #ddd;
+	/// 	@include m('baz'){
+	/// 		color: #f000;
+	/// 	}
+	/// }
+@mixin mod($name){
+	&_#{$name}{
+		@content;
+	}
+}
+
+/// Helper mixin that helps to create a `Element Of Element` of BEM structure/
+/// @example scss - Create `Element Of Element`
+	/// @include block('nav'){
+	/// 	@include element('menu'){
+	/// 		@include el-of-el('item'){
+	/// 			font-size: 12px;
+	/// 		}
+	/// 	}
+	/// }
+@mixin el-of-el($name){
+	&-#{$name}{
+		@content;
+	}
+}

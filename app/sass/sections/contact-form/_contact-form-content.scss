@@ -1,0 +1,19 @@
+@include b('contact-form'){
+	@include e('content'){
+		@include resp-min(md){
+			padding-left: 75px;
+		}
+		@include resp-min(lg){
+			padding-left: 100px;
+		}
+		@include ee('title'){
+			position: relative;
+			font-size: 20px;
+			margin-bottom: 45px;
+			@include resp-min(sm){
+				font-size: 30px;
+			}
+
+		}
+	}
+}
