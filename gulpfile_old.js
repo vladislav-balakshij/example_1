@@ -13,7 +13,7 @@ gulp.task('sass', function() {
     .pipe(sassGlob())
     .pipe(sass({
       outputStyle: 'expanded'
-    }).on('error', sass.logError))
+    }).on('errorsss', sass.logError))
     .pipe(autoprefixer({
       browsers: ['last 15 versions'],
       cascade: false
